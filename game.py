@@ -13,9 +13,15 @@ for _ in range(6):
             if a % n == 0:
                 print(f"{a}は素数じゃない！")
                 break
+            if a <= 1:
+                print(f"{a}は素数じゃない！")
+                break
         for n in range(2, int(np.sqrt(b) + 1)):
             if b % n == 0:
                 print(f"{b}は素数じゃない！")
+                break
+            if a <= 1:
+                print(f"{a}は素数じゃない！")
                 break
 
         if a + b == cn:
