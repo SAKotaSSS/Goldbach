@@ -7,21 +7,19 @@ for _ in range(6):
     print(cn)
     while True:
         # 二つの数を受け取り，素数か判定，その後足して等しいか確認
-        a = int(input("素数１："))
-        b = int(input("素数２："))
+        while True:
+            a = int(input("素数１："))
+            b = int(input("素数２："))
+            if a > 1 and b > 1:
+                break
+
         for n in range(2, int(np.sqrt(a) + 1)):
             if a % n == 0:
-                print(f"{a}は素数じゃない！")
-                break
-            if a <= 1:
                 print(f"{a}は素数じゃない！")
                 break
         for n in range(2, int(np.sqrt(b) + 1)):
             if b % n == 0:
                 print(f"{b}は素数じゃない！")
-                break
-            if a <= 1:
-                print(f"{a}は素数じゃない！")
                 break
 
         if a + b == cn:
